@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camisa Sustentável</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+    }
+
+.header {
+  background-color: #68a56b;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;   /* centraliza verticalmente */
+  justify-content: space-between; /* espaço entre logo e menu */
+}
+
+.header .logo img {
+  height: 50px;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px; /* espaço entre os links */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.header .navbar a {
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      .header .navbar a:hover {
+        color: #007bff !important; /* Bootstrap primary blue on hover */
+      }
+      .header .icons ion-icon {
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+      .header .icons ion-icon:hover {
+        color: #007bff !important;
+      }
+
+.icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+    }
+
+    .breadcrumb {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .gallery {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .buybox {
+      flex: 1;
+      min-width: 250px;
+      padding: 10px;
+    }
+
+    .price {
+      font-size: 20px;
+      color: green;
+      font-weight: bold;
+    }
+
+    .cta button {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .primary {
+      background: blue;
+      color: white;
+    }
+
+    .secondary {
+      background: lightgray;
+    }
+
+    .specs, .desc {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      background: green;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Header personalizado -->
+    <header class="header d-flex justify-content-between align-items-center px-4 py-2 bg-dark fixed-top">
+      <a href="#" class="logo d-flex align-items-center">
+        <!-- Replaced with a more generic logo placeholder -->
+        <img src="../assets/img/logo1.png" alt="GaiaFlux Logo" style="height:80px;">
+      </a>
+      <nav class="navbar d-none d-md-flex gap-4">
+        <a href="../index.html" class="text-white text-decoration-none">Inicio</a>
+        <a href="categorias.html" class="text-white text-decoration-none">Categorias</a>
+        <a href="contato.html" class="text-white text-decoration-none">Contato</a>
+      </nav>
+      <div class="icons d-flex gap-3">
+        <div><ion-icon name="cart" class="text-white fs-4"></ion-icon></div>
+        <div id="menu-btn" class="d-md-none"><ion-icon name="menu" class="text-white fs-4"></ion-icon></div>
+      </div>
+    </header>
+
+  <main>
+    <div class="breadcrumb">
+      
+    </div>
+
+    <div class="grid">
+      <div class="gallery">
+        <img src="../assets/img/shampoo.jpeg" alt="Shampoo Natural">
+      </div>
+
+      <div class="buybox">
+        <h2>Shampoo Natural</h2>
+        <p>Novo | 40 vendidos</p>
+        <div class="price">R$ 39,90</div>
+        <p>🚚 Frete grátis para todo o Brasil</p>
+        <div class="cta">
+          <button class="primary">Comprar agora</button>
+          <button class="secondary">Adicionar ao carrinho</button>
+        </div>
+        <ul>
+          <li>♻️ Produzida com materiais reciclados</li>
+          <li>🌱 Extratos de plantas e óleos essenciais</li>
+          <li>🛡️ Compra Garantida</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="specs">
+      <h3>Detalhes do produto</h3>
+      <ul>
+        <li>Marca: EcoTech</li>
+        <li>Material: 100% plantas</li>
+        <li>Cor: Verde Floresta</li>
+        <li>Dermatologicamente testado</li>
+        <li>Certificação: BAYER/li>
+      </ul>
+    </div>
+
+    <div class="desc">
+      <h3>Descrição</h3>
+      <p>
+        O <b>Shampoo Natural EcoTech</b> nasceu da união entre a tecnologia verde e os ingredientes naturais, trazendo um cuidado completo para os cabelos sem agredir o meio ambiente.
+      </p>
+      <ul>
+        <li>Produção com baixo consumo de água.</li>
+        <li>Não utiliza corantes químicos agressivos.</li>
+        <li>Embalagem  produzida com plástico reciclado e 100% reciclável.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Loja Sustentável — Todos os direitos reservados.
+  </footer>
+</body>
+</html>
