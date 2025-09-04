@@ -5,7 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="formulario.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <title>Formulário</title>
+  <title>Contato</title>
+  <style>
+      
+        .header {
+        background-color:  #68a56b !important; /* Dark background for header */
+        padding: 1rem 1.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+      .header .navbar a:hover {
+        color: #007bff !important; /* Bootstrap primary blue on hover */
+      }
+      .header .icons ion-icon {
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+      .header .icons ion-icon:hover {
+        color: #007bff !important;
+      }
+        
+        .footer {
+        background-color: #68a56b; /* Dark background for footer */
+        color: #ffffff;
+        padding: 0.5rem ;
+        font-size: 0.9rem;
+      }
+      .footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2rem;
+      }
+      .footer-col {
+        flex: 1;
+        min-width: 200px;
+      }
+      .footer-col .heading-footer {
+        font-size: 1.2rem;
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+      .footer-col .heading-footer span {
+        color: #007bff; /* Highlight color */
+      }
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-col ul li:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+      .footer-col ul li a {
+        color: #cccccc;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .footer-col ul li a:hover {
+        color: #007bff;
+        padding-left: 8px;
+      }
+      .footer-col .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: 0 10px 10px 0;
+        text-decoration: none;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.3s ease;
+        font-size: 1.2rem;
+      }
+      .footer-col .social-links a:hover {
+        color: #343a40;
+        background-color: #ffffff;
+      }
+      .footer-bottom {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #cccccc;
+      }
+      html,body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center; /* centraliza no meio da tela */
+        padding: 40px 20px;
+      }
+  </style>
 </head>
 <body>
 
@@ -18,21 +119,19 @@
     <header class="header d-flex justify-content-between align-items-center px-4 py-2 bg-dark fixed-top">
       <a href="#" class="logo d-flex align-items-center">
         <!-- Replaced with a more generic logo placeholder -->
-        <img src="https://via.placeholder.com/150x50/007bff/ffffff?text=GaiaFlux+Logo" alt="GaiaFlux Logo" style="height:50px;">
+        <img src="../assets/img/logo1.png" alt="GaiaFlux Logo" style="height:80px;">
       </a>
       <nav class="navbar d-none d-md-flex gap-4">
-        <a href="index.html" class="text-white text-decoration-none">Home</a>
-        <a href="#about" class="text-white text-decoration-none">Sobre</a>
-        <a href="#menu" class="text-white text-decoration-none">Menu</a>
-        <a href="#produts" class="text-white text-decoration-none">Promoções</a>
-        <a href="#formularios" class="text-white text-decoration-none">Avaliações</a>
+        <a href="../index.html" class="text-white text-decoration-none">Inicio</a>
+        <a href="categorias.html" class="text-white text-decoration-none">Categorias</a>
+        <a href="contato.html" class="text-white text-decoration-none">Contato</a>
       </nav>
       <div class="icons d-flex gap-3">
         <div><ion-icon name="cart" class="text-white fs-4"></ion-icon></div>
         <div id="menu-btn" class="d-md-none"><ion-icon name="menu" class="text-white fs-4"></ion-icon></div>
       </div>
     </header>
-
+<main>
   <div class="container mt-5">
     <form>
       <div class="form-floating mb-3">
@@ -58,6 +157,7 @@
       <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
   </div>
+</main>
   <!-- Footer -->
     <footer class="footer">
         <div class="container">
