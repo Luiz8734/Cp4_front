@@ -1,0 +1,239 @@
+/* formulario.css */
+
+/* Reset básico e fonte */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    line-height: 1.6; /* Melhora a legibilidade */
+    color: #333; /* Cor de texto padrão */
+}
+
+/* Container do formulário */
+.container.mt-5 { /* Mantemos o container Bootstrap para o formulário */
+    max-width: 600px; /* Largura máxima para o formulário */
+    margin-top: 120px !important; /* Desce do topo, !important para sobrescrever o mt-5 do Bootstrap */
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Sombra mais suave */
+}
+
+/* Inputs e textarea (usando classes Bootstrap para maior consistência) */
+/* As classes form-control do Bootstrap já cuidam da maioria desses estilos,
+   mas podemos adicionar alguns ajustes se necessário. */
+.form-floating .form-control {
+    border: 1px solid #ced4da; /* Cor de borda padrão do Bootstrap */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-floating .form-control:focus {
+    border-color: #86b7fe; /* Cor de foco do Bootstrap */
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Botão de envio */
+.btn-primary { /* Estilo do botão padrão do Bootstrap */
+    width: 100%;
+    padding: 12px;
+    font-size: 18px; /* Texto um pouco maior para o botão */
+    border-radius: 5px;
+    background-color: #0d6efd; /* Cor primária do Bootstrap */
+    border-color: #0d6efd;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+/* Estilos para o Header (já devem estar no seu style.css principal, mas adicionados aqui para referência caso este seja um arquivo standalone) */
+.header {
+    background-color: #222; /* Cor de fundo do header */
+    padding: 10px 4%;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.header .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.header .navbar a:hover {
+    color: #0d6efd; /* Cor ao passar o mouse */
+}
+
+.header .icons ion-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.header .icons ion-icon:hover {
+    color: #0d6efd; /* Cor ao passar o mouse */
+}
+
+
+/* Footer (ajustado para corresponder ao HTML fornecido) */
+.footer {
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px 20px 20px;
+    margin-top: 50px;
+}
+
+.footer .container { /* Garante que o conteúdo do footer fique centralizado e com largura limitada */
+    max-width: 1140px; /* Largura máxima semelhante ao Bootstrap container */
+    margin: 0 auto;
+    padding: 0 15px; /* Padding lateral */
+}
+
+.footer-col {
+    /* flex: 1; /* Removido para controle mais preciso com grid ou flex-wrap */
+    min-width: 180px; /* Largura mínima para colunas */
+    margin-bottom: 20px;
+}
+
+.footer-cols { /* Usando essa classe para o container das colunas do footer */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Espaçamento entre as colunas */
+}
+
+
+.heading-footer {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #fff; /* Garante que o título seja branco */
+}
+
+.heading-footer span {
+    color: #0d6efd; /* Cor de destaque para o span no título do footer */
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc; /* Cor de link mais suave */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #fff; /* Brilho ao passar o mouse */
+    text-decoration: underline;
+}
+
+.social-links a {
+    display: inline-block; /* Para que os ícones fiquem na mesma linha */
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    color: #222;
+    background-color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px; /* Mais espaço acima do texto de copyright */
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    color: #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container.mt-5 {
+        margin-top: 100px !important;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 15px;
+    }
+
+    .footer-cols {
+        flex-direction: column;
+        align-items: flex-start; /* Alinha as colunas à esquerda */
+    }
+
+    .footer-col {
+        width: 100%; /* Ocupa a largura total em telas menores */
+        min-width: unset; /* Remove a largura mínima para melhor ajuste */
+        text-align: center; /* Centraliza o texto das colunas */
+    }
+
+    .footer-col ul {
+        text-align: center; /* Centraliza os itens da lista */
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center; /* Centraliza os ícones sociais */
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container.mt-5 {
+        margin-top: 80px !important;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .header .navbar {
+        display: none; /* Esconde a navbar em telas muito pequenas, o menu-btn do Ionicons cuidaria disso */
+    }
+
+    .header .logo img {
+        height: 40px; /* Logo um pouco menor */
+    }
+
+    .header .icons ion-icon {
+        font-size: 1.3rem;
+    }
+}

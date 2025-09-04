@@ -105,6 +105,115 @@
         max-width: 18rem; /* Define a largura máxima dos cards */
       }
 
+      /* Custom styles for header and footer */
+      .header {
+        background-color: #343a40 !important; /* Dark background for header */
+        padding: 1rem 1.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .header .logo img {
+        height: 45px; /* Slightly adjusted logo height */
+      }
+      .header .navbar a {
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      .header .navbar a:hover {
+        color: #007bff !important; /* Bootstrap primary blue on hover */
+      }
+      .header .icons ion-icon {
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+      .header .icons ion-icon:hover {
+        color: #007bff !important;
+      }
+
+      .footer {
+        background-color: #343a40; /* Dark background for footer */
+        color: #ffffff;
+        padding: 3rem 0;
+        font-size: 0.9rem;
+      }
+      .footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2rem;
+      }
+      .footer-col {
+        flex: 1;
+        min-width: 200px;
+      }
+      .footer-col .heading-footer {
+        font-size: 1.2rem;
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+      .footer-col .heading-footer span {
+        color: #007bff; /* Highlight color */
+      }
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-col ul li:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+      .footer-col ul li a {
+        color: #cccccc;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .footer-col ul li a:hover {
+        color: #007bff;
+        padding-left: 8px;
+      }
+      .footer-col .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: 0 10px 10px 0;
+        text-decoration: none;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.3s ease;
+        font-size: 1.2rem;
+      }
+      .footer-col .social-links a:hover {
+        color: #343a40;
+        background-color: #ffffff;
+      }
+      .footer-bottom {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #cccccc;
+      }
+
+      /* Carousel Specific Styles */
+      .carousel-item {
+        height: 500px; /* Fixed height for consistency */
+        overflow: hidden;
+      }
+
+      .carousel-img-fit {
+        height: 100%;
+        width: 100%; /* Ensure image takes full width */
+        object-fit: cover; /* This will make images cover the area, cropping if necessary */
+        display: block;
+      }
+      /* Ensure main content is not hidden by fixed header */
+      main {
+        padding-top: px; /* Adjust based on your header's height */
+      }
+
+
     </style>
   </head>
   <body>
@@ -116,14 +225,15 @@
     <!-- Header personalizado -->
     <header class="header d-flex justify-content-between align-items-center px-4 py-2 bg-dark fixed-top">
       <a href="#" class="logo d-flex align-items-center">
-        <img src="img/Generated Image September 02, 2025 - 11_18PM.jpeg" alt="logo da loja" style="height:50px;">
+        <!-- New Logo -->
+        <img src="./img/Generated Image September 02, 2025 - 11_18PM.jpeg" alt="GaiaFlux Logo" style="height:50px;">
       </a>
       <nav class="navbar d-none d-md-flex gap-4">
         <a href="#home" class="text-white text-decoration-none">Home</a>
         <a href="#about" class="text-white text-decoration-none">Sobre</a>
         <a href="#menu" class="text-white text-decoration-none">Menu</a>
         <a href="#produts" class="text-white text-decoration-none">Promoções</a>
-        <a href="#review" class="text-white text-decoration-none">Avaliações</a>
+        <a href="formulario.html" class="text-white text-decoration-none">Formulario</a>
       </nav>
       <div class="icons d-flex gap-3">
         <div><ion-icon name="cart" class="text-white fs-4"></ion-icon></div>
@@ -131,7 +241,7 @@
       </div>
     </header>
 
-    <main style="margin-top:80px"><!-- adiciona espaço para não ficar atrás do header -->
+    <main>
       <!-- Carousel -->
       <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -139,56 +249,38 @@
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
- <div class="carousel-inner">
-  <div class="carousel-item active">
-    <img src="img/produto1.jpeg" class="d-block w-100 carousel-img-fit" alt="Descrição da imagem">
-    <div class="container">
-      <div class="carousel-caption text-start">
-        <h1>Example headline.</h1>
-        <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-      </div>
-    </div>
-  </div>
-  <div class="carousel-item">
-    <img src="img/produto2.png" class="d-block w-100 carousel-img-fit" alt="Descrição da imagem">
-    <div class="container">
-      <div class="carousel-caption">
-        <h1>Another example headline.</h1>
-        <p>Some representative placeholder content for the second slide of the carousel.</p>
-        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-      </div>
-    </div>
-  </div>
-  <div class="carousel-item">
-    <img src="img/pcasa2.jpeg" class="d-block w-100 carousel-img-fit" alt="Descrição da imagem" style="">
-    <div class="container">
-      <div class="carousel-caption text-end">
-        <h1>One more for good measure.</h1>
-        <p>Some representative placeholder content for the third slide of this carousel.</p>
-        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-  .carousel-item {
-    height: 500px;
-    overflow: hidden;
-    width: 100%;
-  }
-
- .carousel-img-fit {
-  height: 100%;            /* mantém altura do slide */
-  object-fit: contain;      /* mantém proporção sem cortar */
-  display: block;
-  margin: 0 auto;
-  transform: scale(4);  /* aumenta a imagem 5% para preencher mais */
-}
-
-
-</style>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/produto1.jpeg" class="d-block w-100 carousel-img-fit" alt="Descrição da imagem">
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Example headline.</h1>
+                <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/produto2.png" class="d-block w-100 carousel-img-fit" alt="Descrição da imagem">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>Some representative placeholder content for the second slide of the carousel.</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/roupa2.jpeg" class="d-block w-100 carousel-img-fit" alt="Descrição da imagem">
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>One more for good measure.</h1>
+                <p>Some representative placeholder content for the third slide of this carousel.</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
@@ -264,10 +356,9 @@
             </div>
           </div>
         </div>
+      </div>
 
-
-      <!-- FOOTER -->
-  <!-- Footer -->
+      <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-col">
@@ -301,8 +392,8 @@
             <p>&copy; 2025 GaiaFlux. Todos os direitos reservados.</p>
         </div>
     </footer>
+    </main>
 
-    <!-- Bootstrap JS (bundle com Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
   </body>
 </html>
