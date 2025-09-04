@@ -10,230 +10,236 @@ body {
     color: #333; /* Cor de texto padrão */
 }
 
-/* Container do formulário */
-.container.mt-5 { /* Mantemos o container Bootstrap para o formulário */
-    max-width: 600px; /* Largura máxima para o formulário */
-    margin-top: 120px !important; /* Desce do topo, !important para sobrescrever o mt-5 do Bootstrap */
-    margin-bottom: 50px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Sombra mais suave */
-}
-
-/* Inputs e textarea (usando classes Bootstrap para maior consistência) */
-/* As classes form-control do Bootstrap já cuidam da maioria desses estilos,
-   mas podemos adicionar alguns ajustes se necessário. */
-.form-floating .form-control {
-    border: 1px solid #ced4da; /* Cor de borda padrão do Bootstrap */
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.form-floating .form-control:focus {
-    border-color: #86b7fe; /* Cor de foco do Bootstrap */
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-}
-
-/* Botão de envio */
-.btn-primary { /* Estilo do botão padrão do Bootstrap */
-    width: 100%;
-    padding: 12px;
-    font-size: 18px; /* Texto um pouco maior para o botão */
-    border-radius: 5px;
-    background-color: #0d6efd; /* Cor primária do Bootstrap */
-    border-color: #0d6efd;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.btn-primary:hover {
-    background-color: #0b5ed7;
-    border-color: #0a58ca;
-}
-
-/* Estilos para o Header (já devem estar no seu style.css principal, mas adicionados aqui para referência caso este seja um arquivo standalone) */
+/* Header (assumindo que é compartilhado com outras páginas) */
 .header {
-    background-color: #222; /* Cor de fundo do header */
-    padding: 10px 4%;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
+    background-color: #343a40 !important; /* Fundo escuro para o cabeçalho */
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave para o cabeçalho */
+    position: fixed; /* Fixa o cabeçalho no topo */
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
 }
 
 .header .logo img {
-    height: 50px;
+    height: 45px; /* Altura padrão do logo */
 }
 
 .header .navbar a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Transição suave para a cor do link */
+    color: #fff !important; /* Garante texto branco */
+    text-decoration: none; /* Remove sublinhado */
 }
 
 .header .navbar a:hover {
-    color: #0d6efd; /* Cor ao passar o mouse */
+    color: #007bff !important; /* Cor azul primária do Bootstrap ao passar o mouse */
 }
 
 .header .icons ion-icon {
-    color: #fff;
-    font-size: 1.5rem;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Transição suave para a cor do ícone */
+    color: #fff !important; /* Garante ícones brancos */
 }
 
 .header .icons ion-icon:hover {
-    color: #0d6efd; /* Cor ao passar o mouse */
+    color: #007bff !important; /* Cor azul primária ao passar o mouse */
 }
 
+/* Container principal do formulário */
+.container.mt-5 {
+    max-width: 600px; /* Largura máxima padrão para o formulário em telas maiores */
+    margin-top: 120px !important; /* Desce do topo para não sobrepor o header fixo */
+    margin-bottom: 50px;
+    padding: 120px;
+    background-color: #fff; /* Fundo branco para o formulário */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Sombra mais suave */
+}
 
-/* Footer (ajustado para corresponder ao HTML fornecido) */
+/* Estilo para inputs e textareas usando classes Bootstrap (form-floating) */
+.form-floating .form-control {
+    border: 1px solid #ced4da; /* Borda padrão */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Transições suaves */
+}
+
+.form-floating .form-control:focus {
+    border-color: #86b7fe; /* Borda azul ao focar */
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Sombra suave ao focar */
+}
+
+/* Botão de envio */
+.btn-primary {
+    width: 100%; /* Ocupa 100% da largura do pai */
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #0d6efd; /* Cor de fundo azul primária */
+    border-color: #0d6efd; /* Cor da borda azul primária */
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Transições suaves */
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7; /* Cor de fundo mais escura ao passar o mouse */
+    border-color: #0a58ca; /* Cor da borda mais escura ao passar o mouse */
+}
+
+/* Estilos do Footer */
 .footer {
-    width: 100%;
-    background-color: #222;
-    color: #fff;
-    padding: 40px 20px 20px 20px;
-    margin-top: 50px;
+    background-color: #343a40; /* Fundo escuro para o footer */
+    color: #ffffff; /* Texto branco */
+    padding: 1rem 0 ; /* Padding vertical */
+    font-size: 0.9rem;
+    
 }
 
-.footer .container { /* Garante que o conteúdo do footer fique centralizado e com largura limitada */
-    max-width: 1140px; /* Largura máxima semelhante ao Bootstrap container */
-    margin: 0 auto;
+.footer .container {
+    max-width: 1140px; /* Largura máxima para o container do footer */
+    margin: 0 auto; /* Centraliza o container */
     padding: 0 15px; /* Padding lateral */
 }
 
 .footer-col {
-    /* flex: 1; /* Removido para controle mais preciso com grid ou flex-wrap */
-    min-width: 180px; /* Largura mínima para colunas */
-    margin-bottom: 20px;
+    margin-bottom: 2rem; /* Espaçamento entre as colunas do footer */
 }
 
-.footer-cols { /* Usando essa classe para o container das colunas do footer */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; /* Espaçamento entre as colunas */
+.footer-col .heading-footer {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    position: relative;
 }
 
-
-.heading-footer {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: #fff; /* Garante que o título seja branco */
-}
-
-.heading-footer span {
-    color: #0d6efd; /* Cor de destaque para o span no título do footer */
+.footer-col .heading-footer span {
+    color: #007bff; /* Cor de destaque */
 }
 
 .footer-col ul {
-    list-style: none;
+    list-style: none; /* Remove marcadores de lista */
     padding: 0;
     margin: 0;
 }
 
-.footer-col ul li {
-    margin-bottom: 10px;
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 0.8rem; /* Espaçamento entre os itens da lista */
 }
 
 .footer-col ul li a {
-    color: #ccc; /* Cor de link mais suave */
+    color: #cccccc; /* Cor dos links */
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease; /* Transição suave */
 }
 
 .footer-col ul li a:hover {
-    color: #fff; /* Brilho ao passar o mouse */
-    text-decoration: underline;
+    color: #007bff; /* Cor de destaque ao passar o mouse */
+    padding-left: 8px; /* Efeito de deslize ao passar o mouse */
 }
 
-.social-links a {
-    display: inline-block; /* Para que os ícones fiquem na mesma linha */
+.footer-col .social-links a {
+    display: inline-flex; /* Para centralizar ícones */
+    align-items: center;
+    justify-content: center;
     height: 40px;
     width: 40px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
     margin: 0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #fff;
-    transition: all 0.5s ease;
+    text-decoration: none;
+    border-radius: 50%; /* Torna o background circular */
+    color: #ffffff;
+    transition: all 0.3s ease;
     font-size: 1.2rem;
 }
 
-.social-links a:hover {
-    color: #222;
-    background-color: #fff;
+.footer-col .social-links a:hover {
+    color: #343a40; /* Cor do ícone ao passar o mouse */
+    background-color: #ffffff; /* Fundo branco ao passar o mouse */
 }
 
 .footer-bottom {
     text-align: center;
-    margin-top: 30px; /* Mais espaço acima do texto de copyright */
-    font-size: 0.9rem;
-    border-top: 1px solid #444;
-    padding-top: 20px;
-    color: #ccc;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Borda superior para separar */
+    color: #cccccc;
 }
 
-/* Responsividade */
+/* --- Responsiveness - Ajustes para Tablets (max-width: 768px) --- */
 @media (max-width: 768px) {
     .container.mt-5 {
-        margin-top: 100px !important;
-        margin-left: 15px;
+        margin-top: 100px !important; /* Ajusta a margem superior para acomodar o header fixo */
+        margin-left: 15px; /* Adiciona margem nas laterais */
         margin-right: 15px;
-        padding: 15px;
+        padding: 15px; /* Reduz o padding interno do formulário */
     }
-
-    .footer-cols {
-        flex-direction: column;
-        align-items: flex-start; /* Alinha as colunas à esquerda */
+    .header .navbar {
+        display: none; /* Esconde a navegação principal para ser substituída por um menu mobile */
     }
-
     .footer-col {
-        width: 100%; /* Ocupa a largura total em telas menores */
-        min-width: unset; /* Remove a largura mínima para melhor ajuste */
-        text-align: center; /* Centraliza o texto das colunas */
+        margin-bottom: 1.5rem; /* Ajusta espaçamento entre colunas do footer em tablets */
+        text-align: center; /* Centraliza o texto das colunas do footer */
     }
-
     .footer-col ul {
-        text-align: center; /* Centraliza os itens da lista */
+        display: inline-block; /* Ajuda a centralizar a lista, se necessário */
     }
-
-    .social-links {
-        display: flex;
-        justify-content: center; /* Centraliza os ícones sociais */
-        width: 100%;
+    .footer-col .social-links {
+        text-align: center; /* Centraliza os ícones sociais */
     }
 }
 
+/* --- Responsiveness - Ajustes OTIMIZADOS para Celulares (max-width: 480px) --- */
 @media (max-width: 480px) {
     .container.mt-5 {
-        margin-top: 80px !important;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 10px;
+        max-width: 95%; /* Define uma largura máxima percentual para ser mais flexível */
+        margin-top: 70px !important; /* Margem superior um pouco menor para dar mais espaço */
+        margin-left: auto; /* Centraliza o container horizontalmente */
+        margin-right: auto; /* Centraliza o container horizontalmente */
+        padding: 10px; /* Padding interno reduzido para compactar o formulário */
+    }
+    .form-floating .form-control {
+        min-height: 45px; /* Altura mínima para inputs para ficarem menores */
+        padding: 0.75rem 0.75rem; /* Ajuste do padding para compactar o conteúdo do input */
+        font-size: 0.9rem; /* Fonte dos inputs um pouco menor */
+    }
+    .form-floating label {
+        font-size: 0.9rem; /* Fonte dos labels flutuantes menor */
+        top: 0.75rem; /* Ajuste da posição do label flutuante para corresponder ao novo padding */
+        left: 0.75rem;
+    }
+    /* Certifica que o label de focar ainda se ajusta */
+    .form-floating>.form-control:focus~label,
+    .form-floating>.form-control:not(:placeholder-shown)~label,
+    .form-floating>.form-select~label {
+        transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem); /* Ajusta a escala e translação do label quando focado/preenchido */
+    }
+    .form-floating textarea.form-control {
+        min-height: 100px; /* Altura mínima para o textarea */
     }
 
     .btn-primary {
-        font-size: 16px;
-        padding: 10px;
+        font-size: 1rem; /* Fonte do botão menor para melhor ajuste */
+        padding: 10px; /* Padding do botão reduzido */
     }
-
-    .header .navbar {
-        display: none; /* Esconde a navbar em telas muito pequenas, o menu-btn do Ionicons cuidaria disso */
-    }
-
     .header .logo img {
-        height: 40px; /* Logo um pouco menor */
+        height: 35px; /* Logo ainda menor no celular */
     }
-
     .header .icons ion-icon {
-        font-size: 1.3rem;
+        font-size: 1.2rem; /* Ícones menores no celular */
+    }
+    .footer-col .heading-footer {
+        font-size: 1rem; /* Títulos do footer menores */
+    }
+    .footer-col ul li a {
+        font-size: 0.8rem; /* Links do footer menores */
+    }
+    .footer-col .social-links a {
+        height: 30px; /* Ícones sociais ainda menores */
+        width: 30px;
+        font-size: 0.9rem;
+        margin: 0 4px 4px 0;
+    }
+    .footer-bottom {
+        font-size: 0.75rem; /* Texto de copyright menor */
+        padding-top: 0.8rem;
     }
 }
