@@ -105,6 +105,21 @@
         justify-content: center;
         align-items: center; /* centraliza no meio da tela */
         padding: 40px 20px;
+        background-color: #f8f9fa; /* Light background for the main content area */
+      }
+      /* New styles for the form container */
+      .form-container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 500px; /* Limit the width of the form for better readability */
+      }
+      .form-container h2 {
+        margin-bottom: 1.5rem;
+        color: #343a40;
+        text-align: center;
       }
   </style>
 </head>
@@ -132,7 +147,8 @@
       </div>
     </header>
 <main>
-  <div class="container mt-5">
+  <div class="form-container">
+    <h2>Entre em Contato</h2>
     <form>
       <div class="form-floating mb-3">
         <input type="text" class="form-control" id="nomeInput" placeholder="Digite seu nome">
@@ -154,7 +170,7 @@
         <label for="mensagemInput">Mensagem</label>
       </div>
 
-      <button type="submit" class="btn btn-primary">Enviar</button>
+      <button type="submit" class="btn btn-primary w-100">Enviar</button>
     </form>
   </div>
 </main>
