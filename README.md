@@ -44,7 +44,7 @@ O site contempla:
 ---
  
 ### 🌍 Publicação    
-  👉 [Link na Vercel](https://seu-usuario.github.io/ecotrend/)  
+  👉 [Link na Vercel](https://cp4-front-3c6u.vercel.app/)  
 
 ---
 
