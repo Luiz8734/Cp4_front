@@ -1,4 +1,4 @@
-# 🌱 EcoTrend - E-commerce Sustentável
+# 🌱 E-commerce Sustentável
 
 ## 📌 Descrição do Projeto
 O **EcoTrend** é um e-commerce especializado em produtos sustentáveis e ecológicos, desenvolvido para promover um estilo de vida mais consciente.  
