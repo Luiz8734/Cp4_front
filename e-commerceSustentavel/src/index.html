@@ -16,7 +16,7 @@
     <!-- CSS opcional do carousel -->
     <link href="../css/carousel.css" rel="stylesheet" />
 
-    <meta name="theme-color" content="#712cf9" />
+    <meta name="theme-color" content="#68a56b" />
 
     <style>
       .bd-placeholder-img {
@@ -67,19 +67,19 @@
         -webkit-overflow-scrolling: touch;
       }
       .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+        --bd-violet-bg: #68a56b;
+        --bd-violet-rgb: 104,165,107;
         --bs-btn-font-weight: 600;
         --bs-btn-color: var(--bs-white);
         --bs-btn-bg: var(--bd-violet-bg);
         --bs-btn-border-color: var(--bd-violet-bg);
         --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-hover-bg: #57925a;
+        --bs-btn-hover-border-color: #57925a;
         --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
         --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
+        --bs-btn-active-bg: #4b804e;
+        --bs-btn-active-border-color: #4b804e;
       }
       .bd-mode-toggle {
         z-index: 1500;
@@ -96,32 +96,37 @@
       .card-grid {
         display: flex;
         flex-wrap: wrap;
-        gap: 1.5rem; /* Espaçamento entre os cards */
-        justify-content: center; /* Centraliza os cards */
+        gap: 1.5rem;
+        justify-content: center;
       }
       .card-grid .card {
-        flex: 1 1 auto; /* Permite que os cards cresçam e encolham */
-        max-width: 18rem; /* Define a largura máxima dos cards */
+        flex: 1 1 auto;
+        max-width: 18rem;
+      }
+      .card-body {
+        text-align: center;
       }
 
       /* Custom styles for header and footer */
       .header {
-        background-color: #68a56b !important; /* Dark background for header */
+        background-color: #68a56b !important;
         padding: 1rem 1.5rem;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       }
       .header .logo img {
-        height: 45px; /* Slightly adjusted logo height */
+        height: 70px;
       }
       .header .navbar a {
         font-weight: 500;
+        color: #f8f8f8 !important;
         transition: color 0.3s ease;
       }
       .header .navbar a:hover {
-        color: #007bff !important; /* Bootstrap primary blue on hover */
+        color: #007bff !important;
       }
       .header .icons ion-icon {
         cursor: pointer;
+        color: #f8f8f8 !important;
         transition: color 0.3s ease;
       }
       .header .icons ion-icon:hover {
@@ -129,9 +134,9 @@
       }
 
       .footer {
-        background-color: #68a56b; /* Dark background for footer */
+        background-color: #68a56b;
         color: #ffffff;
-        padding: 6rem ;
+        padding: 6rem;
         font-size: 0.9rem;
       }
       .footer .container {
@@ -146,12 +151,12 @@
       }
       .footer-col .heading-footer {
         font-size: 1.2rem;
-        color: #ffffff;
+        color: #f8f8f8;
         margin-bottom: 1.5rem;
         position: relative;
       }
       .footer-col .heading-footer span {
-        color: #007bff; /* Highlight color */
+        color: #007bff;
       }
       .footer-col ul {
         list-style: none;
@@ -184,7 +189,7 @@
         font-size: 1.2rem;
       }
       .footer-col .social-links a:hover {
-        color: #343a40;
+        color: #68a56b;
         background-color: #ffffff;
       }
       .footer-bottom {
@@ -197,21 +202,45 @@
 
       /* Carousel Specific Styles */
       .carousel-item {
-        height: 500px; /* Fixed height for consistency */
+        height: 500px;
         overflow: hidden;
       }
 
       .carousel-img-fit {
         height: 100%;
-        width: 100%; /* Ensure image takes full width */
-        object-fit: cover; /* This will make images cover the area, cropping if necessary */
+        width: 100%;
+        object-fit: cover;
         display: block;
       }
-      /* Ensure main content is not hidden by fixed header */
       main {
-        padding-top: px; /* Adjust based on your header's height */
+        padding-top: 100px;
       }
 
+      .carousel-caption {
+        text-align: center !important;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+      }
+      .carousel-caption p.opacity-75 {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+      }
+      .carousel-caption .btn {
+        margin-top: 1rem;
+      }
+
+      .card .btn-details {
+        background-color: #68a56b;
+        border-color: #68a56b;
+        color: #ffffff;
+        margin-top: 1rem;
+      }
+      .card .btn-details:hover {
+        background-color: #57925a;
+        border-color: #57925a;
+      }
 
     </style>
   </head>
@@ -222,18 +251,18 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <!-- Header personalizado -->
-    <header class="header d-flex justify-content-between align-items-center px-4 py-2 bg-dark fixed-top">
+    <header class="header d-flex justify-content-between align-items-center px-4 py-2 fixed-top">
       <a href="#" class="logo d-flex align-items-center">
-        <img src="assets/img/logo1.png" alt="logo da loja" style="height:70px;">
+        <img src="assets/img/Generated Image September 04, 2025 - 10_48PM.jpeg" alt="logo da loja" style="height:70px;">
       </a>
       <nav class="navbar d-none d-md-flex gap-4">
-        <a href="index.html" class="text-white text-decoration-none">Inicio</a>
-        <a href="pages/categorias.html" class="text-white text-decoration-none">Categorias</a>
-        <a href="pages/contato.html" class="text-white text-decoration-none">Contato</a>
+        <a href="index.html" class="text-decoration-none">Inicio</a>
+        <a href="pages/categorias.html" class="text-decoration-none">Categorias</a>
+        <a href="pages/contato.html" class="text-decoration-none">Contato</a>
       </nav>
       <div class="icons d-flex gap-3">
-        <div><ion-icon name="cart" class="text-white fs-4"></ion-icon></div>
-        <div id="menu-btn" class="d-md-none"><ion-icon name="menu" class="text-white fs-4"></ion-icon></div>
+        <div><ion-icon name="cart" class="fs-4"></ion-icon></div>
+        <div id="menu-btn" class="d-md-none"><ion-icon name="menu" class="fs-4"></ion-icon></div>
       </div>
     </header>
 
@@ -249,10 +278,8 @@
           <div class="carousel-item active">
             <img src="assets/img/banner.png" class="d-block w-100 carousel-img-fit" alt="Descrição da imagem">
             <div class="container">
-              <div class="carousel-caption text-start">
-                <h1></h1>
-                <p class="opacity-75"></p>
-                <p><a class="btn btn-lg btn-primary" href="#">Entre agora</a></p>
+              <div class="carousel-caption"> <!-- Removido text-start, agora centralizado via CSS -->
+                <p><a class="btn btn-lg btn-primary" href="pages/categorias.html">Entre agora</a></p>
               </div>
             </div>
           </div>
@@ -260,19 +287,15 @@
             <img src="assets/img/banner2.png" class="d-block w-100 carousel-img-fit" alt="Descrição da imagem">
             <div class="container">
               <div class="carousel-caption">
-                <h1></h1>
-                <p></p>
-                <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
+                <p><a class="btn btn-lg btn-primary" href="pages/camiseta.html">Saiba Mais</a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <img src="assets/img/banner3.png" class="d-block w-100 carousel-img-fit" alt="Descrição da imagem">
             <div class="container">
-              <div class="carousel-caption text-end">
-                <h1></h1>
-                <p></p>
-                <p><a class="btn btn-lg btn-primary" href="#">Ver produtos</a></p>
+              <div class="carousel-caption"> <!-- Removido text-end, agora centralizado via CSS -->
+                <p><a class="btn btn-lg btn-primary" href="pages/categorias.html">Ver produtos</a></p>
               </div>
             </div>
           </div>
@@ -298,14 +321,16 @@
               <img src="assets/img/produto1.jpeg" class="card-img-top" alt="Produto de Beleza Sustentável">
               <div class="card-body">
                 <p class="card-text">Descubra nossa linha de produtos de beleza que respeitam o meio ambiente.</p>
+                <a href="pages/categorias.html" class="btn btn-details">Mais detalhes</a> <!-- Botão adicionado e centralizado -->
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
-              <img src="assets/img/produto2.png" class="card-img-top" alt="Produto de Beleza Sustentável">
+              <img src="assets/img/shampoo.jpeg" class="card-img-top" alt="Produto de Beleza Sustentável">
               <div class="card-body">
                 <p class="card-text">Maquiagens orgânicas e sem testes em animais para sua rotina de beleza.</p>
+                <a href="pages/shampoo.html" class="btn btn-details">Mais detalhes</a> <!-- Botão adicionado e centralizado -->
               </div>
             </div>
           </div>
@@ -316,9 +341,10 @@
         <div class="row card-grid mb-5">
           <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
-              <img src="assets/img/pcasa1.jpeg" class="card-img-top" alt="Produto para Casa Sustentável">
+              <img src="assets/img/kit para casa.jpeg" class="card-img-top" alt="Produto para Casa Sustentável">
               <div class="card-body">
                 <p class="card-text">Transforme seu lar com itens decorativos e funcionais ecologicamente corretos.</p>
+                <a href="pages/kit.html" class="btn btn-details">Mais detalhes</a> <!-- Botão adicionado e centralizado -->
               </div>
             </div>
           </div>
@@ -327,6 +353,7 @@
               <img src="assets/img/pcasa2.jpeg" class="card-img-top" alt="Produto para Casa Sustentável">
               <div class="card-body">
                 <p class="card-text">Soluções inteligentes para um consumo consciente e um ambiente mais verde.</p>
+                <a href="pages/categorias.html" class="btn btn-details">Mais detalhes</a> <!-- Botão adicionado e centralizado -->
               </div>
             </div>
           </div>
@@ -340,14 +367,16 @@
               <img src="assets/img/roupa1.jpeg" class="card-img-top" alt="Roupa Sustentável">
               <div class="card-body">
                 <p class="card-text">Vista-se com ética e estilo. Conheça nossa coleção de roupas sustentáveis.</p>
+                <a href="pages/categorias.html" class="btn btn-details">Mais detalhes</a> <!-- Botão adicionado e centralizado -->
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
-              <img src="assets/img/roupa2.jpeg" class="card-img-top" alt="Roupa Sustentável">
+              <img src="assets/img/camiseta.jpeg" class="card-img-top" alt="Roupa Sustentável">
               <div class="card-body">
                 <p class="card-text">Peças produzidas com algodão orgânico, linho e outras fibras ecológicas.</p>
+                <a href="pages/camiseta.html" class="btn btn-details">Mais detalhes</a> <!-- Botão adicionado e centralizado -->
               </div>
             </div>
           </div>
@@ -390,6 +419,6 @@
     </footer>
     </main>
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
